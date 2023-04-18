@@ -143,7 +143,8 @@ $ ln -s /path/to/test-repository/aufgabe/test/pgdp /path/to/artemis-repository/t
 . *Ensure no solution or homework-code is getting revealed*
 . Commit and push to your fork repository
 . Open a Pull Request to this repository (https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests[GitHub Documentation])
-. Wait until the changes are merged
+. Wait until another student reviewed the PR
+. Notify Johannes about a ready Pull Request and wait for the merge
 
 == Contributors
 [#img-contributors]
