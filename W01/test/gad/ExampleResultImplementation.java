@@ -1,33 +1,33 @@
 package gad;
 
-import org.junit.jupiter.api.*;
-import pgdp.maze.Result;
+import java.util.Arrays;
+import gad.maze.Result;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ExampleResultImplementation implements Result {
     private int[] pathX;
     private int[] pathY;
     private int pathIndex;
 
-    public ResultImplementation(int expectedSize) {
-        path = new Coordinate[expectedSize];
+    public ExampleResultImplementation(int expectedSize) {
+        pathX = new int[expectedSize];
+        pathY = new int[expectedSize];
     }
 
     @Override
     public void addLocation(int x, int y) {
-        if (pathIndex < path.length) {
+        if (pathIndex < pathX.length) {
             pathX[pathIndex] = x;
-            pathX[pathIndex] = y;
+            pathY[pathIndex] = y;
         }
         pathIndex++;
     }
 
-    public void testLogging(int solutionLength, int[] solutionX, int[] solutionY) {
-        if (pathIndex != solutionLength) {
-            fail("Number of logged steps wrong");
-        }
+    public void testLogging(int[] solutionX, int[] solutionY) {
+        assertEquals(solutionX.length, pathIndex, "Number of logged steps wrong");
 
-        if (!Arrays.equals(solutionX, pathX) || !Arrays.equals(solutionY, pathY)) {
-            fail("Logged wrong path");
-        }
+        assertArrayEquals(solutionX, pathX, "Logged wrong path");
+        assertArrayEquals(solutionY, pathY, "Logged wrong path");
     }
 }
