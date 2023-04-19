@@ -19,14 +19,42 @@ exit: true
 
 =====
 
-# Test Case with isolated sections
+# Test Case no exit
 
 10 10 1
 exit: false
 
 =====
 
-# Test Case with isolated sections
+# Test Case no exit
 
 10 10 7
+exit: false
+
+=====
+
+# Huge Test Case no exit + huge
+
+200 10 9
+exit: false
+
+=====
+
+# Huge Test Case no exit + huge
+
+200 10 6
+exit: false
+
+=====
+
+# Huge Test Case exit + ultra huge
+
+200 50 9
+exit: true
+
+=====
+
+# Huge Test Case exit + ultra huge
+
+200 50 19
 exit: false
