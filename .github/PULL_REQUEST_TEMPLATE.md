@@ -8,7 +8,7 @@
 - [ ] I locally pass **all** tests or calculated manually the correct solutions on paper.
 - [ ] I chose a title conforming to the [naming conventions for pull requests](https://github.com/JohannesStoehr/gad23-tests/blob/main/CONTRIBUTING.md).
 - [ ] The newly added tests do not reveal the solutions dynamically calculating the solutions as expected in the exercise.
-- 
+
 ### Description
 <!-- Describe your changes shortly -->
 
