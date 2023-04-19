@@ -1,0 +1,32 @@
+# Small Maze
+
+3 3 0
+exit: true
+
+=====
+
+# Example Test Case (Test for Test)
+
+4 4 1
+exit: true
+
+=====
+
+# Artemis Test Case
+
+10 10 0
+exit: true
+
+=====
+
+# Test Case with isolated sections
+
+10 10 1
+exit: false
+
+=====
+
+# Test Case with isolated sections
+
+10 10 7
+exit: false
