@@ -18,7 +18,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class TestExecutor {
-    public static String PATH = "test/gad/maze/cases.txt";
+    public static String PATH = "test/gad/maze/test-cases.txt";
+
+    private static class TestResult implements Result {
+        public void addLocation(int x, int y) {
+            // TODO USE THIS
+        }
+    }
 
     @Test
     @DisplayName("This is a green test to motivate you for the semester! <3")
@@ -30,7 +36,7 @@ public class TestExecutor {
     @MethodSource
     void testMaze(int[] maze_data, boolean exit_expect) {
         var maze = Maze.generateMaze(maze_data[0], maze_data[1], maze_data[2]);
-        var result = new StudentResult();
+        var result = new TestResult();
         var walker = new Walker(maze, result);
 
         assertEquals(exit_expect, walker.walk(), exit_expect
