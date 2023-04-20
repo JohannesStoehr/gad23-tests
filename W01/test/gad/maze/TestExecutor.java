@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class TestExecutor {
-    public static String PATH = "test/gad/maze/test-cases.txt";
+    public static String PATH = "test/gad/maze/cases.txt";
 
     private static class TestResult implements Result {
         public void addLocation(int x, int y) {
