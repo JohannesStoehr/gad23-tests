@@ -29,4 +29,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Label PR
-        uses: actions/labeler@v3
+        uses: actions/labeler@v4
