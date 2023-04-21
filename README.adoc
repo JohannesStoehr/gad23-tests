@@ -1,6 +1,6 @@
 :title: GAD23-Test
 :description: Testcases for GAD exercises
-:keywords: java, tum, pgdp, students
+:keywords: java, tum, gad, students
 :author: Johannes Stöhr
 :revremark:
 :showtitle:
@@ -69,7 +69,7 @@ git pull
 +
 [source]
 ----
-./your-pgdp-project
+./your-gad-project
 ├───src
 ├───test
 └───...
@@ -125,14 +125,14 @@ As this is a student-driven project please keep in mind that mistakes can happen
 This has to be executed in the command line, run as administrator:
 [source,shell]
 ----
-$ mklink /d \path\to\artemis-repository\test\pgdp \path\to\test-repository\aufgabe\test\pgdp
+$ mklink /d \path\to\artemis-repository\test\gad \path\to\test-repository\aufgabe\test\gad
 ----
 
 *Linux/MacOS:*
 
 [source,shell]
 ----
-$ ln -s /path/to/test-repository/aufgabe/test/pgdp /path/to/artemis-repository/test/pgdp
+$ ln -s /path/to/test-repository/aufgabe/test/gad /path/to/artemis-repository/test/gad
 ----
 
 == How to Contribute
