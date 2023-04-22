@@ -58,6 +58,5 @@ public class TestLogging {
                         false
                 )
         //, More Arguments here
-        );
-    }
+        );}
 }
