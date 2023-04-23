@@ -54,7 +54,21 @@ exit: true
 
 =====
 
-# Huge Test Case exit + ultra huge
+# Huge Test Case no exit + ultra huge
 
 200 50 19
 exit: false
+
+=====
+
+# Test Case exit + complex path going through some points multiple times
+
+50 50 5
+exit: true
+
+=====
+
+# Test Case exit + complex path going through some points multiple times + circle in the path
+
+50 50 10
+exit: true
