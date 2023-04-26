@@ -1,4 +1,4 @@
-package gad;
+package gad.binarysearch;
 
 import gad.binarysearch.BinSea;
 import gad.binarysearch.StudentResult;
@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 
 
 @Nested
-class SimpleSearch {
+class SimpleSearchTest {
 
 	static Stream<Arguments> simple() {
 		return Stream.of(

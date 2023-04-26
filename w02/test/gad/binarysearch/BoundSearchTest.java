@@ -1,4 +1,4 @@
-package gad;
+package gad.binarysearch;
 
 import gad.binarysearch.BinSea;
 import gad.binarysearch.StudentResult;
@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class BoundSearch {
+class BoundSearchTest {
 	static Stream<Arguments> simple() {
 		return Stream.of(
 				Arguments.of(new int[]{1, 2, 3, 4}, 1, true, 0),

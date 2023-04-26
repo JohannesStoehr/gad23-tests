@@ -1,4 +1,4 @@
-package gad;
+package gad.binarysearch;
 
 import gad.binarysearch.BinSea;
 import gad.binarysearch.Interval;
@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class IntervalSearch {
+class IntervalSearchTest {
 
 	static Stream<Arguments> random() {
 		return Stream.of(
