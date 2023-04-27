@@ -21,33 +21,6 @@ class BoundSearchTest {
 		);
 	}
 
-	static Stream<Arguments> duplicatesInArray() {
-		return Stream.of(
-				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 2, true, 1),
-				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 2, false, 3),
-				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 6, true, 4),
-				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 6, false, 4),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 4, true, 3),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 4, false, 6),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 8, true, 7),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 8, false, 8)
-		);
-	}
-
-	static Stream<Arguments> valueNotInArray() {
-		return Stream.of(
-				Arguments.of(new int[]{1, 2, 3, 4}, 5, true, -1),
-				Arguments.of(new int[]{1, 2, 3, 4}, 5, false, 3),
-				Arguments.of(new int[]{1, 2, 3, 4}, 0, true, 0),
-				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 0, false, -1),
-				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, -1, true, 0),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 3, true, 3),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 3, false, 2),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 7, true, 7),
-				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 7, false, 6)
-		);
-	}
-
 	static Stream<Arguments> randomValues() {
 		return Stream.of(
 				Arguments.of(new int[]{0, 1, 1, 1, 1, 1, 1, 1}, 1, true, 1),
@@ -73,6 +46,33 @@ class BoundSearchTest {
 		return Stream.of(
 				Arguments.of(new int[]{1, 1, 1, 1, 1, 1, 1}, 1, true, 0),
 				Arguments.of(new int[]{1, 1, 1, 1, 1, 1, 1}, 1, false, 6)
+		);
+	}
+
+	static Stream<Arguments> valueNotInArray() {
+		return Stream.of(
+				Arguments.of(new int[]{1, 2, 3, 4}, 5, true, -1),
+				Arguments.of(new int[]{1, 2, 3, 4}, 5, false, 3),
+				Arguments.of(new int[]{1, 2, 3, 4}, 0, true, 0),
+				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 0, false, -1),
+				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, -1, true, 0),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 3, true, 3),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 3, false, 2),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 7, true, 7),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 7, false, 6)
+		);
+	}
+
+	static Stream<Arguments> duplicatesInArray() {
+		return Stream.of(
+				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 2, true, 1),
+				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 2, false, 3),
+				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 6, true, 4),
+				Arguments.of(new int[]{1, 2, 2, 2, 6, 7, 8, 9, 10}, 6, false, 4),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 4, true, 3),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 4, false, 6),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 8, true, 7),
+				Arguments.of(new int[]{1, 2, 2, 4, 4, 4, 4, 8, 8, 27, 89}, 8, false, 8)
 		);
 	}
 

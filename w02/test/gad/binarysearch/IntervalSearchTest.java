@@ -50,7 +50,7 @@ class IntervalSearchTest {
 
 	@ParameterizedTest
 	@MethodSource({"random", "empty"})
-	void testSearch(int[] arr, Interval interval, Interval expectedInterval) {
+	void testSearch(int[] arr, Interval.NonEmptyInterval interval, Interval expectedInterval) {
 
 		var resIntervall = BinSea.search(arr, interval, new StudentResult(), new StudentResult());
 
