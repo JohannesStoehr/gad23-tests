@@ -29,9 +29,9 @@ class IntervalSearchTest {
 						Interval.NonEmptyInterval.fromArrayIndices(3, 9),
 						Interval.fromArrayIndices(1, 8)),
 				Arguments.of(
-                        new int[]{1, 4, 4, 4, 5, 5, 5, 5, 8, 10, 23},
-                        Interval.NonEmptyInterval.fromArrayIndices(8, 8),
-                        Interval.fromArrayIndices(8, 8))
+						new int[]{1, 4, 4, 4, 5, 5, 5, 5, 8, 10, 23},
+						Interval.NonEmptyInterval.fromArrayIndices(8, 8),
+						Interval.fromArrayIndices(8, 8))
 		);
 	}
 
