@@ -1,7 +1,7 @@
 package gad.logging;
 
-import gad.BinSea;
-import gad.Interval;
+import gad.binarysearch.BinSea;
+import gad.binarysearch.Interval;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

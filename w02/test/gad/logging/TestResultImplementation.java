@@ -1,6 +1,6 @@
 package gad.logging;
 
-import gad.Result;
+import gad.binarysearch.Result;
 
 import static org.junit.jupiter.api.Assertions.*;
 
