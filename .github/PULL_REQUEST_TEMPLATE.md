@@ -11,15 +11,8 @@
     - [ ] Optional: I calculated manually the correct solutions on paper.
 - [ ] I chose a title conforming to the [naming conventions for pull requests](https://github.com/JohannesStoehr/gad23-tests/blob/main/CONTRIBUTING.md).
 - [ ] The newly added tests do not reveal the solutions dynamically calculating the solutions as expected in the exercise.
+- [ ] Other students approved this Pull Request.
 
 ### Description
 <!-- Describe your changes shortly -->
 
-### Review Progress
-<!-- Each Pull Request should be reviewed by at least one other student. -->
-<!-- The code and the functionality (= running the tests locally) need to be reviewed -->
-<!-- The reviewer or author check the following boxes. -->
-
-#### Review
-- [ ] Review 1
-- [ ] Optional Review 2
