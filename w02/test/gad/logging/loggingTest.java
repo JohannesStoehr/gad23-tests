@@ -81,6 +81,11 @@ public class loggingTest {
                                                 Interval.NonEmptyInterval.fromArrayIndices(3, 9),
                                                 new int[] { 5, 2, 0 },
                                                 new int[] { 5, 8, 9 }),
+                                Arguments.of(
+                                                new int[] { 1, 4, 4, 4, 5, 5, 5, 5, 8, 10, 23 },
+                                                Interval.NonEmptyInterval.fromArrayIndices(8, 8),
+                                                new int[] { 5, 8 },
+                                                new int[] { 5, 8 }),
                                 // empty
                                 Arguments.of(
                                                 new int[] { 1, 4, 4, 4, 5, 5, 5, 5, 8 },
