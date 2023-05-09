@@ -6,8 +6,10 @@ import org.junit.jupiter.api.DisplayName;
 import gad.dynamicarray.DynamicArray;
 import gad.dynamicarray.Interval.EmptyInterval;
 import gad.dynamicarray.Interval.NonEmptyInterval;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DynamicArrayTest {
     @Test
@@ -44,5 +46,13 @@ public class DynamicArrayTest {
 
         assertEquals(EmptyInterval.getEmptyInterval(), array.reportUsage(EmptyInterval.getEmptyInterval(), 0));
         assertEquals("[]", array.toString());
+    }
+
+    @Test
+    @DisplayName("Throws IllegalArgumentException")
+    void throwsTest() {
+        assertThrows(IllegalArgumentException.class, () -> new DynamicArray(0, 5));
+        assertThrows(IllegalArgumentException.class, () -> new DynamicArray(5, -5));
+        assertThrows(IllegalArgumentException.class, () -> new DynamicArray(2, 1));
     }
 }
