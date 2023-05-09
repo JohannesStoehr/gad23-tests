@@ -47,4 +47,12 @@ public class DynamicArrayTest {
         assertEquals(EmptyInterval.getEmptyInterval(), array.reportUsage(EmptyInterval.getEmptyInterval(), 0));
         assertEquals("[]", array.toString());
     }
+
+    @Test
+    @DisplayName("Throws IllegalArgumentException")
+    void throwsTest() {
+        assertThrows(IllegalArgumentException.class, () -> new DynamicArray(0, 5));
+        assertThrows(IllegalArgumentException.class, () -> new DynamicArray(5, -5));
+        assertThrows(IllegalArgumentException.class, () -> new DynamicArray(2, 1));
+    }
 }
