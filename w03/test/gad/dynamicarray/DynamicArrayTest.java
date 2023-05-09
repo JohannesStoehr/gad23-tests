@@ -1,7 +1,5 @@
 package gad.dynamicarray;
 
-import gad.dynamicarray.DynamicArray;
-import gad.dynamicarray.Interval;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -33,11 +31,25 @@ class DynamicArrayTest {
                 Arguments.of(array, Interval.EmptyInterval.getEmptyInterval(), 0, Interval.EmptyInterval.getEmptyInterval(), new int[0])
         );
     }
+    static Stream<Arguments> illegalArgumentsExceptionTest() {
+        return Stream.of(
+                Arguments.of(0,1, IllegalArgumentException.class),
+                Arguments.of(4,-3, IllegalArgumentException.class),
+                Arguments.of(9,2, IllegalArgumentException.class)
+        );
+    }
 
     @ParameterizedTest
     @MethodSource({"artemisTestArguments"})
     void artemisTest(DynamicArray array, Interval interval, int minSize, Interval expectedInterval, int[] exptectedArray) {
         assertEquals(expectedInterval, array.reportUsage(interval, minSize));
         assertEquals(Arrays.toString(exptectedArray), array.toString());
+    }
+
+    @ParameterizedTest
+    @MethodSource({"illegalArgumentsExceptionTest"})
+    void illegalArgumentExceptionTest(int growthFactor, int maxOverhead, Class exception)
+    {
+        assertThrows(exception, () -> new DynamicArray(growthFactor,maxOverhead));
     }
 }
