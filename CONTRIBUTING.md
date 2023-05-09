@@ -112,7 +112,7 @@ You should copy the package structure of the implementation to the test.
 **BAD**
 ```java
 // Location of the implementation
-src/pgdp/pingu/ReadWayPoints.java
+src/gad/pingu/ReadWayPoints.java
 
 // Location of the test file
 test/pingu/ReadWayPointsTest.java
@@ -121,10 +121,10 @@ test/pingu/ReadWayPointsTest.java
 **GOOD**
 ```java
 // Location of the implementation
-src/pgdp/pingu/ReadWayPoints.java
+src/gad/pingu/ReadWayPoints.java
 
 // Location of the test file
-test/pgdp/pingu/ReadWayPointsTest.java
+test/gad/pingu/ReadWayPointsTest.java
 ```
 
 ### Only one test case per test method
