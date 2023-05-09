@@ -1,0 +1,29 @@
+package gad.dynamicStack;
+
+import gad.dynamicarray.DynamicStack;
+import gad.dynamicarray.StudentResult;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+public class DynamicStackCorrectSize {
+
+
+    @Test
+    @DisplayName("DynamicStackCorrectSize")
+    void DynamicStackCorrectSize(){
+        DynamicStack dynamicStack = new DynamicStack(3, 4, new StudentResult());
+        dynamicStack.pushBack(10);
+        dynamicStack.pushBack(20);
+        dynamicStack.pushBack(30);
+        assertEquals(3,dynamicStack.size());
+        dynamicStack.pushBack(40);
+        assertEquals(4,dynamicStack.size());
+        dynamicStack.popBack();
+        dynamicStack.popBack();
+        assertEquals(2,dynamicStack.size());
+    }
+
+}
