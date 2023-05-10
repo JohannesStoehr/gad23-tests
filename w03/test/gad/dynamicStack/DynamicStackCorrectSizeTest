@@ -8,7 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class DynamicStackCorrectSize {
+public class DynamicStackCorrectSizeTest {
 
     DynamicStack dynamicStack = new DynamicStack(3, 4, new StudentResult());
     
