@@ -21,7 +21,6 @@ public class DynamicStackCorrectSizeTest {
         assertEquals(3,dynamicStack.size());
         dynamicStack.pushBack(40);
         assertEquals(4,dynamicStack.size());
-
     }
 
     @Test
@@ -36,6 +35,5 @@ public class DynamicStackCorrectSizeTest {
         assertEquals(3,dynamicStack.size());
         dynamicStack.popBack();
         assertEquals(2,dynamicStack.size());
-
     }
 }
