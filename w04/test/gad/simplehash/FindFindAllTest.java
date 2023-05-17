@@ -35,6 +35,13 @@ public class FindFindAllTest {
                         add(new Pair<>("x", "foo"));
                         add(new Pair<>("y", "bar"));
                     }
+                }}, "bar"),
+
+                Arguments.of(1, new int[]{1}, new String("y"), new List[]{new ArrayList<Pair<String, String>>() {
+                    {
+                        add(new Pair<>("x", "foo"));
+                        add(new Pair<>("y", "bar"));
+                    }
                 }}, "bar")
 
         );
@@ -103,6 +110,14 @@ public class FindFindAllTest {
                     }
                 }}, new String[]{"foo", "bar"}),
                 Arguments.of(1, new int[]{1}, "x", new List[]{new ArrayList<Pair<String, String>>() {
+                    {
+                        add(new Pair<>("x", "foo"));
+                        add(new Pair<>("x", "bar"));
+                        add(new Pair<>("y", "baz"));
+                    }
+                }}, new String[]{"foo", "bar"}),
+
+                Arguments.of(1, new int[]{1}, new String("x"), new List[]{new ArrayList<Pair<String, String>>() {
                     {
                         add(new Pair<>("x", "foo"));
                         add(new Pair<>("x", "bar"));
