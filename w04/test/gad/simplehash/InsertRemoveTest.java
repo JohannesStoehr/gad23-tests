@@ -40,12 +40,7 @@ public class InsertRemoveTest {
     public void testInsert(int minSize, int[] a, String[] k, String[] v, List<Pair<String, String>>[] expect) {
         Hashtable<String, String> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         for (int i = 0; i < k.length; i++) {
             hashtable.insert(k[i], v[i], mH);
@@ -89,12 +84,7 @@ public class InsertRemoveTest {
                            List<Pair<String, String>>[] after) throws Exception {
         Hashtable<String, String> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         Field tableField = hashtable.getClass().getDeclaredField("table");
         tableField.setAccessible(true);
