@@ -74,8 +74,18 @@ public class InsertRemoveTest {
                     {
                         add(new Pair<>("y", "bar"));
                     }
-                }}));
-
+                }}),
+                Arguments.of(1, new int[]{1}, new String("x"), true, new List[]{new ArrayList<Pair<String, String>>() {
+                    {
+                        add(new Pair<>("x", "foo"));
+                        add(new Pair<>("y", "bar"));
+                    }
+                }}, new List[]{new ArrayList<Pair<String, String>>() {
+                    {
+                        add(new Pair<>("y", "bar"));
+                    }
+                }})
+        );
     }
 
     @ParameterizedTest
