@@ -47,12 +47,7 @@ public class FindFindAllTest {
             throws Exception {
         Hashtable<String, String> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         Field tableField = hashtable.getClass().getDeclaredField("table");
         tableField.setAccessible(true);
@@ -120,12 +115,7 @@ public class FindFindAllTest {
             throws Exception {
         Hashtable<String, String> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         Field tableField = hashtable.getClass().getDeclaredField("table");
         tableField.setAccessible(true);

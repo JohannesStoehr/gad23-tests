@@ -36,12 +36,7 @@ public class HashTest {
     public void testHash(int minSize, int[] a, String k, int expect) {
         Hashtable<String, Integer> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         assertEquals(expect, hashtable.h(k, mH));
     }
