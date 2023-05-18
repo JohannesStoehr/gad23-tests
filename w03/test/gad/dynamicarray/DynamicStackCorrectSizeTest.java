@@ -1,4 +1,4 @@
-package gad.dynamicStack;
+package gad.dynamicarray;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
