@@ -35,6 +35,13 @@ public class FindFindAllTest {
                         add(new Pair<>("x", "foo"));
                         add(new Pair<>("y", "bar"));
                     }
+                }}, "bar"),
+
+                Arguments.of(1, new int[]{1}, new String("y"), new List[]{new ArrayList<Pair<String, String>>() {
+                    {
+                        add(new Pair<>("x", "foo"));
+                        add(new Pair<>("y", "bar"));
+                    }
                 }}, "bar")
 
         );
@@ -47,12 +54,7 @@ public class FindFindAllTest {
             throws Exception {
         Hashtable<String, String> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         Field tableField = hashtable.getClass().getDeclaredField("table");
         tableField.setAccessible(true);
@@ -108,6 +110,14 @@ public class FindFindAllTest {
                         add(new Pair<>("x", "bar"));
                         add(new Pair<>("y", "baz"));
                     }
+                }}, new String[]{"foo", "bar"}),
+
+                Arguments.of(1, new int[]{1}, new String("x"), new List[]{new ArrayList<Pair<String, String>>() {
+                    {
+                        add(new Pair<>("x", "foo"));
+                        add(new Pair<>("x", "bar"));
+                        add(new Pair<>("y", "baz"));
+                    }
                 }}, new String[]{"foo", "bar"})
 
         );
@@ -120,12 +130,7 @@ public class FindFindAllTest {
             throws Exception {
         Hashtable<String, String> hashtable = new Hashtable<>(minSize, a);
 
-        ModuloHelper mH = new ModuloHelper() {
-            @Override
-            public int doTheMagic(int i, int divisor) {
-                return Hashtable.fastModulo(i, divisor);
-            }
-        };
+        ModuloHelper mH = (i, divisor) -> i % divisor;
 
         Field tableField = hashtable.getClass().getDeclaredField("table");
         tableField.setAccessible(true);
