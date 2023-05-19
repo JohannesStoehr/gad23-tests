@@ -462,27 +462,6 @@ public class UnitTest {
         assertDoesNotThrow(() -> Stck(3, 4).pushes(1, 2, 3, 4).pops(4, 3, 2, 1).data.popBack());
     }
 
-    @RepeatedTest(10)
-    @Disabled // irrelevant
-    public void testSameNumbersDynamicStack(RepetitionInfo repetitionInfo) {
-        var i = 10 + repetitionInfo.getCurrentRepetition() * 20;
-        final int c = 1; // 177369420;
-
-        var s = Stck(5, 5).pushes();
-
-        for (int j = 0; j < i; j++) {
-            s = s.pushes(c);
-            System.out.println(s.data.toString());
-        }
-        for (int j = 0; j < i; j++) {
-            s = s.pops(c);
-            System.out.println(s.data.toString());
-        }
-
-        final var k = s;
-        assertDoesNotThrow(() -> k.popCount(1));
-    }
-
     @Test
     public void queue1() {
         Queue(3, 4)
