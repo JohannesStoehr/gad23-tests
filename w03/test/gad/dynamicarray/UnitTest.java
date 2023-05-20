@@ -14,19 +14,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.RepetitionInfo;
 
-// import java.util.Arrays;
-
 import org.junit.jupiter.api.Test;
-
-//
-// HALT STOPP! LESEN!
-//
-// TESTS SIND GE'SPEEDRUN'T UND OHNE QUALITÄT VERFASST
-// DISABLED = ICH [=VERFASSER] PASSE ARTEMIS TESTS [=VIELLEICHT] ABER TESTS NICHT [=SICHER]
-// KEINE GARANTIE!!!!
-//
-
-// Personal Unit Tests
 
 public class UnitTest {
     //
@@ -72,8 +60,6 @@ public class UnitTest {
 
     // Test Dynamic Array
     private static class TDA extends DynamicArray {
-
-        // Test Dynamic Array
         public TDA(int growthFactor, int maxOverhead) {
             super(growthFactor, maxOverhead);
         }
