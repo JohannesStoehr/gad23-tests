@@ -2,16 +2,13 @@ package gad.doublehashing;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
+import static gad.doublehashing.Library.*;
+
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
-import org.junit.jupiter.api.RepetitionInfo;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -32,12 +29,6 @@ public class DoubleHashIntTest {
 
     private static IntStream small_primes() {
         return all_primes().filter(i -> i < 100);
-    }
-
-    public static void assertRange(int from, int value, int to) {
-        if (from > value || value >= to) {
-            fail(String.format("Illegal Value! %s not in range (%s; %s]", value, from, to));
-        }
     }
 
     @ParameterizedTest

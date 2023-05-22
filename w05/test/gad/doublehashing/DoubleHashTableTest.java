@@ -1,12 +1,10 @@
 package gad.doublehashing;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.DisplayName;
 
-import static gad.doublehashing.DoubleHashIntTest.assertRange;
+import static gad.doublehashing.Library.*;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
