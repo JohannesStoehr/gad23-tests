@@ -40,8 +40,8 @@ public class RadixSortTest {
                 Arguments.of(1234, 3, 1),
                 Arguments.of(981739, 2, 7),
                 Arguments.of(439183, 0, 3),
-                //Edge-Cases
                 Arguments.of(0, 99, 0),
+                //Edge-Cases
                 Arguments.of(6, 0, 6),
                 Arguments.of(0, 0, 0)
         );

@@ -15,6 +15,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.Stream;
 
+import static gad.radix.BinaryRadixSort.sort;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BinaryRadixSortTest {
@@ -58,7 +59,7 @@ public class BinaryRadixSortTest {
 
     private void sortTest(int[] elements, int[] expects) {
         Arrays.sort(expects);
-        BinaryRadixSort.sort(elements, new StudentResult());
+        sort(elements, new StudentResult());
         assertArrayEquals(expects, elements);
     }
 
@@ -104,9 +105,16 @@ public class BinaryRadixSortTest {
     /**
      * <div>
      * This test may not pass on every device.
-     * It also doesn't reflect the requirement of the performance description on Artemis.
+     * This test is only an indicator whether the sort-Method might be fast enough for Artemis.
+     * There is no logging for this test, because this is slowing down the method.
      * The timeout only serves as a barrier if the test should run too long on a device.
-     * I need an average of 1.8 seconds for this test.
+     * I need an average of 700 milliseconds for this test specification.
+     * <br>
+     * <br>
+     * If you would like to have also logging for this test, you could change from "new int[2_000_000] to new int[250_000]"
+     * and "new StudentResultTest()" to "new StudentResult()".
+     * After this change the test doesn't reflect the requirement of the performance description on Artemis.
+     * I need an average of 1.8 seconds for this test specification.
      * </div>
      */
     @Test
@@ -114,11 +122,13 @@ public class BinaryRadixSortTest {
     @Order(5)
     void sortBigTest() {
         Random random = new Random(100);
-        int[] numbers = new int[250_000];
+        int[] numbers = new int[2_000_000];
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = random.nextInt(Integer.MIN_VALUE, Integer.MAX_VALUE);
         }
         int[] expects = Arrays.copyOf(numbers, numbers.length);
-        assertTimeoutPreemptively(Duration.ofSeconds(2), () -> sortTest(numbers, expects));
+        Arrays.sort(expects);
+        sort(numbers,new StudentResultTest());
+        assertTimeoutPreemptively(Duration.ofSeconds(2), () -> assertArrayEquals(expects,numbers));
     }
 }
