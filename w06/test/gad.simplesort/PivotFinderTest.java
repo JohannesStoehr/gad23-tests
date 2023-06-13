@@ -34,7 +34,7 @@ public class PivotFinderTest {
         numbers = new int[] {9, 1, 8, 5, 2, 3, 5, 1, 0, 7};
         assertEquals(3, pivotFinder.findPivot(numbers, 0, 9));
         int pivot = pivotFinder.findPivot(numbers, 2, 8);
-        assertTrue(pivot == 3 || pivot == 6);
+        assertTrue(pivot == 3 || pivot == 6, "Expected pivot at index 3 or 6.");
     }
 
     @Test
@@ -42,7 +42,7 @@ public class PivotFinderTest {
         PivotFinder pivotFinder = PivotFinder.getMedianPivotFront(5);
         int[] numbers = new int[] {0, 1, 2, 3};
         int pivot = pivotFinder.findPivot(numbers, 0, 4);
-        assertTrue(1 == pivot || 2 == pivot);
+        assertTrue(1 == pivot || 2 == pivot, "Expected pivot at index 1 or 2");
     }
 
     @Test
