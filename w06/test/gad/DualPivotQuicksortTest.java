@@ -92,6 +92,8 @@ public class DualPivotQuicksortTest {
         assertArrayEquals(expected, numbersCopy);
     }
 
+
+    //for this test to work you have to remove the "result.log()" from your DualPivotQuicksort sort() method
     @Test
     public void dualPivotQuickSortTestLarge() {
         Random random = new Random();
