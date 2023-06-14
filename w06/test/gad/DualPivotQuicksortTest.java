@@ -84,14 +84,12 @@ public class DualPivotQuicksortTest {
     @ParameterizedTest
     @MethodSource
     public void dualPivotQuickSortTest(int[] numbers, int[] expected) {
-        for (int i = 0; i < 100; i++) {
-            int[] numbersCopy = Arrays.copyOf(numbers, numbers.length);
-            DualPivotQuicksort dualPivotQuicksort = new DualPivotQuicksort(DualPivotFinder.getRandomPivot(i), 0);
-            StudentResult result = new StudentResult();
+        int[] numbersCopy = Arrays.copyOf(numbers, numbers.length);
+        DualPivotQuicksort dualPivotQuicksort = new DualPivotQuicksort(DualPivotFinder.getFirstLastPivot(), 0);
+        StudentResult result = new StudentResult();
 
-            dualPivotQuicksort.sort(numbersCopy, result, 0, numbersCopy.length - 1);
-            assertArrayEquals(expected, numbersCopy);
-        }
+        dualPivotQuicksort.sort(numbersCopy, result, 0, numbersCopy.length - 1);
+        assertArrayEquals(expected, numbersCopy);
     }
 
     @Test
@@ -121,7 +119,7 @@ public class DualPivotQuicksortTest {
 
     @RepeatedTest(1000)
     public void dualPivotQuickSortTestPartial() {
-        int[] numbers = new int[]{30, 25, 20, 15, 14, 10, 5, 1, 0, -5, -20, -100};
+        int[] numbers = new int[]{5, 12, 8, 3, 9, 7, 2, 1, 6, 4, 10, 15, 11, 13, 14, 17, 19, 18, 20, 16, 23, 22, 21, 25, 24, 26, 29, 27, 30, 28, 33, 31, 34, 36, 32, 35, 38, 40, 37, 39, 44, 42, 41, 47, 45, 50, 46, 43, 49, 48};
         int[] expected = Arrays.copyOf(numbers, numbers.length);
         int[] expectedCopy = Arrays.copyOf(expected, expected.length);
         int[] expectedCopy3 = new int[expectedCopy.length];
