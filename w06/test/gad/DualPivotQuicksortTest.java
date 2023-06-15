@@ -154,7 +154,7 @@ public class DualPivotQuicksortTest {
         }
 
         DualPivotQuicksort dualPivotQuicksort = new DualPivotQuicksort(DualPivotFinder.getRandomPivot(10), 0);
-        StudentResult result = new StudentResult();
+        StudentResult result = new StudentResultForTest();
 
         dualPivotQuicksort.sort(numbers, result, from, to);
         System.out.println("from: " + from + " to: " + to);
