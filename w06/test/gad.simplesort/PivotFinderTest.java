@@ -1,4 +1,4 @@
-package gad.simplesort;
+package gad.bettersorting;
 
 import org.junit.jupiter.api.Test;
 
