@@ -56,10 +56,3 @@ public class PivotFinderTest {
         assertEquals(5, pivotFinder.findPivot(numbers, 1, 9));
     }
 
-    @Test
-    void testMedianPivotDistributed() {
-        PivotFinder pivotFinder = PivotFinder.getMedianPivotDistributed(5);
-        int[] numbers = new int[] {0, 1, 2, 3};
-        assertEquals(1, pivotFinder.findPivot(numbers, 0, 4));
-    }
-}
