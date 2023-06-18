@@ -2,10 +2,12 @@ package gad.binomilia;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -91,6 +93,67 @@ public class BinomialHeapTest {
             int trees = myResult.getSize();
             assertEquals(expectedSize, trees, "Wrong amount of Trees in heap. If only this test fails, "
                     + "check if there is an Integer-Overflow, since these Numbers are pretty big.");
+        }
+    }
+
+    /**
+     * This test is just an indicator if the code can be fast enough.
+     * The task on Artemis states that the code must complete 5,000 operations in under 2 seconds.
+     * The 700 millisec comes from <a href = "https://zulip.in.tum.de/#narrow/stream/1727-GAD-W08-Binomial-Heap/topic/Timeout/near/1057435">this Zulip</a> message.
+     * That's why I'm testing here with these 700 millisec.
+     *
+     */
+
+    @Test
+    @Timeout(value = 700, unit = TimeUnit.MILLISECONDS)
+    void performanceTest1()
+    {
+        Random random = new Random(400);
+        for(int i=0;i<5_000;i++)
+        {
+            heap.insert(random.nextInt(),new StudentResult());
+        }
+    }
+
+    @Test
+    @Timeout(value = 700, unit = TimeUnit.MILLISECONDS)
+    void performanceTest2()
+    {
+        Random random = new Random(400);
+        for(int i=0;i<2_500;i++)
+        {
+            heap.insert(random.nextInt(),new StudentResult());
+        }
+
+        for(int i=2_500;i>0;i--)
+        {
+            heap.deleteMin(new StudentResult());
+        }
+    }
+
+    @Test
+    @Timeout(value = 700, unit = TimeUnit.MILLISECONDS)
+    void performanceTest3()
+    {
+        Random random = new Random(400);
+        for(int i=0;i<1_250;i++)
+        {
+            heap.insert(random.nextInt(),new StudentResult());
+        }
+
+        for(int i=1_000;i>0;i--)
+        {
+            heap.deleteMin(new StudentResult());
+        }
+
+        for(int i=0;i<1_250;i++)
+        {
+            heap.insert(random.nextInt(),new StudentResult());
+        }
+
+        for(int i=1_500;i>0;i--)
+        {
+            heap.deleteMin(new StudentResult());
         }
     }
 }
