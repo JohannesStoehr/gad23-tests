@@ -16,14 +16,15 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoggingTest {
 
     private static StudentResult studentResult;
     private static ByteArrayOutputStream outputStream;
 
-    private static String PATH = "test/gad/radixsort/logging.txt";
+    private static String PATH = "test/gad/radixsort/loggingCases.txt";
 
     @BeforeEach
     void init() {
@@ -33,6 +34,18 @@ public class LoggingTest {
         System.setOut(printStream);
     }
 
+    /**
+     * <h>CASE FORMATE</h>
+     * <p>
+     * ````<br>
+     * numbers<br>
+     * Log:<br>
+     * logging<br>
+     * ````
+     * </p>
+     *
+     * @return Arguments.of(int[],String)
+     */
     private static Arguments getTestData(String data) {
         String[] data_a = data.split("\nLog:\n");
 
