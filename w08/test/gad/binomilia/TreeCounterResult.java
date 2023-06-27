@@ -1,4 +1,4 @@
-package test.gad.binomilia;
+package gad.binomilia;
 
 import java.util.Arrays;
 import java.util.Collection;

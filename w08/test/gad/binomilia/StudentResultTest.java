@@ -1,7 +1,4 @@
-package test.gad.binomilia;
-
-import gad.binomilia.BinomialTreeNode;
-import gad.binomilia.Result;
+package gad.binomilia;
 
 import java.util.Collection;
 

@@ -1,4 +1,4 @@
-package test.gad.binomilia;
+package gad.binomilia;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

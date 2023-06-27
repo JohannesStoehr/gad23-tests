@@ -1,4 +1,4 @@
-package test.gad.binomilia;
+package gad.binomilia;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -83,7 +83,7 @@ public class LoggingTest {
         }
 
         String consoleOutput = outputStream.toString();
-        String expected = Files.readString(Paths.get("test/gad/binomilia/insertDeleteLoggingTest.txt"));
+        String expected = Files.readString(Paths.get("test/gad/binomilia/insertDeleteLogging.txt"));
         assertEquals(expected, consoleOutput);
     }
 }
