@@ -1,4 +1,4 @@
-package gad.binomilia;
+package test.gad.binomilia;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

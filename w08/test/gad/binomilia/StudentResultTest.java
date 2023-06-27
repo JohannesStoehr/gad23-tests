@@ -1,4 +1,4 @@
-package gad.binomilia;
+package test.gad.binomilia;
 
 import gad.binomilia.BinomialTreeNode;
 import gad.binomilia.Result;
