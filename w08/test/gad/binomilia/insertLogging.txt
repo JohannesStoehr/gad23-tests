@@ -1,0 +1,28 @@
+Starte Einfügen mit Heap mit 0 Bäumen
+Zwischenschritt mit 1 Bäumen
+Starte Einfügen mit Heap mit 1 Bäumen
+Zwischenschritt mit 2 Bäumen
+Zwischenschritt mit 1 Bäumen
+Starte Einfügen mit Heap mit 1 Bäumen
+Zwischenschritt mit 2 Bäumen
+Starte Einfügen mit Heap mit 2 Bäumen
+Zwischenschritt mit 3 Bäumen
+Zwischenschritt mit 2 Bäumen
+Zwischenschritt mit 1 Bäumen
+Starte Einfügen mit Heap mit 1 Bäumen
+Zwischenschritt mit 2 Bäumen
+Starte Einfügen mit Heap mit 2 Bäumen
+Zwischenschritt mit 3 Bäumen
+Zwischenschritt mit 2 Bäumen
+Starte Einfügen mit Heap mit 2 Bäumen
+Zwischenschritt mit 3 Bäumen
+Starte Einfügen mit Heap mit 3 Bäumen
+Zwischenschritt mit 4 Bäumen
+Zwischenschritt mit 3 Bäumen
+Zwischenschritt mit 2 Bäumen
+Zwischenschritt mit 1 Bäumen
+Starte Einfügen mit Heap mit 1 Bäumen
+Zwischenschritt mit 2 Bäumen
+Starte Einfügen mit Heap mit 2 Bäumen
+Zwischenschritt mit 3 Bäumen
+Zwischenschritt mit 2 Bäumen
