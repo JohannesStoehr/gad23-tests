@@ -1,0 +1,13 @@
+digraph {
+	0 [label="5, b=0"];
+	0 -> 1 [label="l"];
+	1 [label="3, b=-1"];
+	1 -> 2 [label="l"];
+	2 [label="1, b=0"];
+	0 -> 3 [label="r"];
+	3 [label="10, b=0"];
+	3 -> 4 [label="l"];
+	4 [label="8, b=0"];
+	3 -> 5 [label="r"];
+	5 [label="20, b=0"];
+}

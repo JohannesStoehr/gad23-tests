@@ -1,0 +1,5 @@
+digraph {
+	0 [label="1, b=1"];
+	0 -> 1 [label="r"];
+	1 [label="1, b=0"];
+}
